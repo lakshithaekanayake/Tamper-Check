@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Checking Tag...</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const uid = params.get('id');
+
+    // Example: known tampered UID list (replace with real UIDs)
+    const tamperedUIDs = [
+      "041AB29CF7D180",
+      "047FBC12345680"
+    ];
+
+    if (uid && tamperedUIDs.includes(uid.toUpperCase())) {
+      window.location.href = "https://www.nestlefamilynes.fi/nan-pro-valikoima";
+    } else {
+      window.location.href = "https://www.averydennison.com/en/home.html";
+    }
+  </script>
+</head>
+<body>
+  <p>Checking tag status, please wait...</p>
+</body>
+</html>
+
+
+
+
+Add redirect logic for tamper check
